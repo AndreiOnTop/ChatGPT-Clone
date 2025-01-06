@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: rgb(28, 28, 28);
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sideBar {
+    flex: 2;
+    border-right: 1px solid rgba(19, 19, 19,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 9;
+}
+
+.logo {
+    margin-right: 1rem;
+}
+
+.brand {
+    font-size: 2rem;
+}
+
+.upperSide {
+    padding: 2.5rem;
+}
+
+.upperSideTop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.addBtn {
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+.midBtn {
+    background: #470aed;
+    border: none;
+    color: white;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.upperSideBottom {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.query {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    background: transparent;
+    margin: 1rem auto;
+    border: 1px solid rgb(100, 100, 100);
+    color: white;
+}
+
+.query>img {
+    margin-right: 1rem;
+    object-fit: cover;
+    height: 1.75rem;
+}
+
+.lowerSide {
+    padding: 2rem;
+    margin-top: auto;
+}
+
+.listItems {
+    margin: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.listItemsImg {
+    margin: 1rem;
+    padding-right: 1rem;
+}
+
+.listItems:nth-child(1)>.listItemsImg {
+    margin-right: 0.5rem;
+}
+
+.listItems:nth-child(3)>.listItemsImg {
+    margin-right: 0.75rem;
+}
+
+.main {
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 6rem 10rem;
+    margin-bottom: 0;
+}
+
+.chats {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 70rem;
+    height: calc(100vh - 17rem);
+    margin: 0 auto;
+    padding-right: 1rem;
+}
+
+.chats::-webkit-scrollbar {
+    display: none;
+}
+
+.chats {
+    scrollbar-width: none;
+}
+
+.chat {
+    margin: 1rem;
+    padding: 4rem 3rem;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: justify;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.chatImg {
+    object-fit: cover;
+    width: 3.5rem;
+    margin-right: 2rem;
+    border-radius: 0.5rem;
+}
+
+.bot {
+    background: rgba(13, 13, 13, 0.5);
+    width: fit-content;
+    border-radius: 30px;
+}
+
+.chat.bot {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.chatFooter {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inp {
+    padding: 0.5rem;
+    background: rgba(13, 13, 13, 0.5);
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.inp>input {
+    width: calc(100% - 3rem);
+    outline: none;
+    padding: 1.25rem;
+    color: white;
+}
+
+.inp>input, .send {
+    background: transparent;
+    border: none;
+}
+
+.chatFooter>p {
+    margin: 2rem 0;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .brand { 
+        font-size: 1.6rem; 
+    }
+
+    .midBtn {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .query {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+    
+    .chat {
+        font-size: 1.3rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .inp > input {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    
+    .inp {
+        padding: 0.5rem;
+    }
+    
+    .chatFooter > p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .App { 
+        flex-direction: column; 
+    }
+    
+    .sideBar {
+        flex: 1;
+        border-right: none;
+        border-bottom: 1px solid rgba(19, 19, 19, 0.5);
+        padding: 1.5rem;
+    }
+    
+    .main {
+        flex: 3;
+        margin: 0;
+        padding: 1.5rem;
+    }
+    
+    .brand {
+        font-size: 1.8rem;
+    }
+    
+    .query {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+    
+    .chat {
+        font-size: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .chatImg {
+        width: 3rem;
+        margin-right: 1rem;
+    }
+    
+    .inp > input {
+        font-size: 1.4rem;
+    }
+}
